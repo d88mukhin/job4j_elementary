@@ -41,4 +41,40 @@ class CounterTest {
         int excepted = 2;
         assertThat(rsl).isEqualTo(excepted);
     }
+
+    @Test
+    void whenSumEvenNumbersFrom1To10Then30() {
+        int start = 1;
+        int finish = 10;
+        int rsl = Counter.sumByEven(start, finish);
+        int excepted = 30;
+        assertThat(rsl).isEqualTo(excepted);
+    }
+
+    @Test
+    void whenSumEvenNumbersFrom3To8Then18() {
+        int start = 3;
+        int finish = 8;
+        int rsl = Counter.sumByEven(start, finish);
+        int excepted = 18;
+        assertThat(rsl).isEqualTo(excepted);
+    }
+
+    @Test
+    void whenSumEvenNumbersFrom1To1Then0() {
+        int start = 1;
+        int finish = 1;
+        int rsl = Counter.sumByEven(start, finish);
+        int excepted = 0;
+        assertThat(rsl).isEqualTo(excepted);
+    }
+
+    @Test
+    void whenSumEvenNumbersFromMinus5To1ThenMinus6() {
+        int start = 1;
+        int finish = 1;
+        int rsl = Counter.sumByEven(start, finish);
+        int excepted = 0;
+        assertThat(rsl).isEqualTo(excepted);
+    }
 }
