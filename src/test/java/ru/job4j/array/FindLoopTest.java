@@ -32,4 +32,48 @@ class FindLoopTest {
         int excepted = 2;
         assertThat(result).isEqualTo(excepted);
     }
+
+    @Test
+    void whenDiaposonHas8ThenResultEqualFinis() {
+        int[] data = new int[] {5, 2, 10, 2, 4, 8, 14, 3, 21, 16};
+        int element = 8;
+        int start = 2;
+        int finish = 5;
+        int result = FindLoop.indexInRanga(data, element, start, finish);
+        int excepted = 5;
+        assertThat(result).isEqualTo(excepted);
+    }
+
+    @Test
+    void whenDiaposonHasSomeEqualElementThen3() {
+        int[] data = new int[] {5, 10, 2, 4, 8, 4, 14, 4, 3, 21, 16};
+        int element = 4;
+        int start = 1;
+        int finish = 8;
+        int result = FindLoop.indexInRanga(data, element, start, finish);
+        int excepted = 3;
+        assertThat(result).isEqualTo(excepted);
+    }
+
+    @Test
+    void whenDiaposonHas2Then3() {
+        int[] data = new int[] {5, 2, 10, 2, 4};
+        int element = 2;
+        int start = 2;
+        int finish = 4;
+        int result = FindLoop.indexInRanga(data, element, start, finish);
+        int excepted = 3;
+        assertThat(result).isEqualTo(excepted);
+    }
+
+    @Test
+    void whenDiaposonHasNot8ThenMinus1() {
+        int[] data = new int[] {5, 2, 10, 2, 4, 8, 14, 3, 21, 16};
+        int element = 8;
+        int start = 2;
+        int finish = 4;
+        int result = FindLoop.indexInRanga(data, element, start, finish);
+        int excepted = -1;
+        assertThat(result).isEqualTo(excepted);
+    }
 }
