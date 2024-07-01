@@ -25,6 +25,15 @@ class ConverterTest {
     }
 
     @Test
+    void when200RblThen3dot3333Dollar() {
+        float input = 200;
+        float expected = 3.3333f;
+        float output = Converter.rubleToDollar(input);
+        float value = 0.0001f;
+        assertThat(output).isEqualTo(expected, withPrecision(value));
+    }
+
+    @Test
     void when5EuroThen350Rbl() {
         float input = 5;
         float expected = 350;
