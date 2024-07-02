@@ -10,8 +10,8 @@ class FitTest {
     void whenMan180Then92() {
         short input = 180;
         double expected = 92;
-        double result = Fit.manWeight(input);
-        assertThat(result).isEqualTo(expected, withPrecision(0.01));
+        double output = Fit.manWeight(input);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
