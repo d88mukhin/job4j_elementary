@@ -1,13 +1,15 @@
 package ru.job4j.condition;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.assertj.core.api.Assertions.*;
 
 class PointTest {
 
+    @Timeout(3)
     @Test
-    void when00to20Then2() {
+    void when00to20Then2() throws InterruptedException {
+        Thread.sleep(5000);
         int x1 = 0;
         int y1 = 0;
         int x2 = 2;
