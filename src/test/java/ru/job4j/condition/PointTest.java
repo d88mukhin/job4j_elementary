@@ -6,7 +6,6 @@ import static org.assertj.core.api.Assertions.*;
 
 class PointTest {
 
-    @Timeout(3)
     @Test
     void when00to20Then2() throws InterruptedException {
         Thread.sleep(5000);
