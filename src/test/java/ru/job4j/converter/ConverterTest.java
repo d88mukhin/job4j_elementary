@@ -38,7 +38,7 @@ class ConverterTest {
         float expected = 120;
         float output = Converter.dollarToRuble(input);
         float value = 0.0001f;
-        assertThat(output).isEqualTo(expected);
+        assertThat(output).isEqualTo(expected, withPrecision(value));
     }
 
     @Test
