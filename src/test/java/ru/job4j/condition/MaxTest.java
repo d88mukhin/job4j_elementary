@@ -2,7 +2,6 @@ package ru.job4j.condition;
 
 import org.junit.jupiter.api.Test;
 
-import javax.lang.model.util.Elements;
 
 import static org.assertj.core.api.Assertions.*;
 
